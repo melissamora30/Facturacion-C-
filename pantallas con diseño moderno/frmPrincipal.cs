@@ -21,44 +21,44 @@ namespace pantallas_con_diseño_moderno
             InitializeScreens();
 
 
-            //BtnTablas.ContextMenuStrip = SubOpcTablas;
+            BtnTablas.ContextMenuStrip = SubOpcTablas;
 
-            //// Si el ContextMenuStrip no se ha añadido a BtnTablas, puedes mostrarlo manualmente
-            ////BtnTablas.Click += (s, e) =>
-            ////{
-            ////    // Mostrar el ContextMenuStrip justo debajo del botón
-            ////    SubOpcTablas.Show(BtnTablas, new Point(0, BtnTablas.Height));
-            ////};
+            // Si el ContextMenuStrip no se ha añadido a BtnTablas, puedes mostrarlo manualmente
+            BtnTablas.Click += (s, e) =>
+            {
+                // Mostrar el ContextMenuStrip justo debajo del botón
+                SubOpcTablas.Show(BtnTablas, new Point(0, BtnTablas.Height));
+            };
 
-            ////ContextMenuStrip de Opción facturación
-            //BtnFacturacion.ContextMenuStrip = SubOpcFacturacion;
-
-
-            //BtnFacturacion.Click += (s, e) =>
-            //{
-
-            //    SubOpcFacturacion.Show(BtnFacturacion, new Point(0, BtnFacturacion.Height));
-            //};
-
-            ////ContextMenuStrip de Opción seguridad
-            //BtnSeguridad.ContextMenuStrip = SubOpcSeguridad;
+            //ContextMenuStrip de Opción facturación
+            BtnFacturacion.ContextMenuStrip = SubOpcFacturacion;
 
 
-            //BtnSeguridad.Click += (s, e) =>
-            //{
+            BtnFacturacion.Click += (s, e) =>
+            {
 
-            //    SubOpcSeguridad.Show(BtnSeguridad, new Point(0, BtnSeguridad.Height));
-            //};
+                SubOpcFacturacion.Show(BtnFacturacion, new Point(0, BtnFacturacion.Height));
+            };
 
-            ////ContextMenuStrip de Opción Acerca De
-            //BtnAcercaDe.ContextMenuStrip = SubOpcAcercaDe;
+            //ContextMenuStrip de Opción seguridad
+            BtnSeguridad.ContextMenuStrip = SubOpcSeguridad;
 
 
-            //BtnAcercaDe.Click += (s, e) =>
-            //{
+            BtnSeguridad.Click += (s, e) =>
+            {
 
-            //    SubOpcAcercaDe.Show(BtnAcercaDe, new Point(0, BtnAcercaDe.Height));
-            //};
+                SubOpcSeguridad.Show(BtnSeguridad, new Point(0, BtnSeguridad.Height));
+            };
+
+            //ContextMenuStrip de Opción Acerca De
+            BtnAcercaDe.ContextMenuStrip = SubOpcAcercaDe;
+
+
+            BtnAcercaDe.Click += (s, e) =>
+            {
+
+                SubOpcAcercaDe.Show(BtnAcercaDe, new Point(0, BtnAcercaDe.Height));
+            };
 
         }
 
@@ -95,7 +95,13 @@ namespace pantallas_con_diseño_moderno
         //}
         public void BtnTablas_Click(object sender, EventArgs e)
         {
+            //pnlContainer(FrmClientes);
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             pnlContainer(FrmClientes);
+
         }
     }
 }

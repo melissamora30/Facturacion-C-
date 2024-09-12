@@ -69,6 +69,10 @@
             pnlContenedor = new Panel();
             frmPrincipalBorder = new Guna.UI2.WinForms.Guna2Elipse(components);
             pnlContainerBorder = new Guna.UI2.WinForms.Guna2Elipse(components);
+            SubOpcTablasBorder = new Guna.UI2.WinForms.Guna2Elipse(components);
+            SubOpcFacturacionborder = new Guna.UI2.WinForms.Guna2Elipse(components);
+            SubOpcSeguridadborder = new Guna.UI2.WinForms.Guna2Elipse(components);
+            SubOpcAcercaDeborder = new Guna.UI2.WinForms.Guna2Elipse(components);
             SubOpcTablas.SuspendLayout();
             PnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogoMenu).BeginInit();
@@ -101,6 +105,7 @@
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             clientesToolStripMenuItem.Size = new Size(167, 24);
             clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // productosToolStripMenuItem
             // 
@@ -218,7 +223,7 @@
             BtnTablas.ShadowDecoration.CustomizableEdges = customizableEdges8;
             BtnTablas.Size = new Size(136, 40);
             BtnTablas.TabIndex = 3;
-            BtnTablas.Text = "Tablas";
+            BtnTablas.Text = " Tablas";
             BtnTablas.Click += BtnTablas_Click;
             // 
             // BtnSalir
@@ -382,6 +387,26 @@
             pnlContainerBorder.BorderRadius = 40;
             pnlContainerBorder.TargetControl = pnlContenedor;
             // 
+            // SubOpcTablasBorder
+            // 
+            SubOpcTablasBorder.BorderRadius = 20;
+            SubOpcTablasBorder.TargetControl = SubOpcTablas;
+            // 
+            // SubOpcFacturacionborder
+            // 
+            SubOpcFacturacionborder.BorderRadius = 20;
+            SubOpcFacturacionborder.TargetControl = SubOpcFacturacion;
+            // 
+            // SubOpcSeguridadborder
+            // 
+            SubOpcSeguridadborder.BorderRadius = 20;
+            SubOpcSeguridadborder.TargetControl = SubOpcSeguridad;
+            // 
+            // SubOpcAcercaDeborder
+            // 
+            SubOpcAcercaDeborder.BorderRadius = 20;
+            SubOpcAcercaDeborder.TargetControl = SubOpcAcercaDe;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -396,6 +421,7 @@
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SISTEMA DE FACTURACIÓN FICORIX";
+            WindowState = FormWindowState.Maximized;
             SubOpcTablas.ResumeLayout(false);
             PnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)LogoMenu).EndInit();
@@ -433,5 +459,9 @@
         private Panel pnlContenedor;
         private Guna.UI2.WinForms.Guna2Elipse frmPrincipalBorder;
         private Guna.UI2.WinForms.Guna2Elipse pnlContainerBorder;
+        private Guna.UI2.WinForms.Guna2Elipse SubOpcTablasBorder;
+        private Guna.UI2.WinForms.Guna2Elipse SubOpcFacturacionborder;
+        private Guna.UI2.WinForms.Guna2Elipse SubOpcSeguridadborder;
+        private Guna.UI2.WinForms.Guna2Elipse SubOpcAcercaDeborder;
     }
 }
